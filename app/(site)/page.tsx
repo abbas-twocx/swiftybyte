@@ -12,17 +12,31 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import { THero } from "@/types/types";
 
 export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
   description: "This is Home for Solid Pro",
-  // other metadata
 };
+
+const heroData = {
+  heading: "We are the digital change makers",
+  description: "",
+  image: {
+    src: "/images/hero/hero-banner.png",
+    alt: "Hero Banner",
+  },
+  link: {
+    children: "Our services",
+    type: "secondary",
+    url: "/services",
+  },
+} as THero;
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero {...heroData} />
       <Brands />
       <Feature />
       <About />

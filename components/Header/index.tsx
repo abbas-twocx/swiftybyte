@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import CustomLink from "../CustomLink/CustomLink";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -43,14 +44,14 @@ const Header = () => {
               alt="logo"
               width={119.03}
               height={30}
-              className="hidden w-full dark:block"
+              className="hidden max-h-[60px] w-full max-w-[220px] object-contain object-center dark:block"
             />
             <Image
               src="/images/logo/logo-light.svg"
               alt="logo"
               width={119.03}
               height={30}
-              className="w-full dark:hidden"
+              className="max-h-[60px] w-full max-w-[220px] object-contain object-center dark:hidden"
             />
           </a>
 
@@ -152,28 +153,13 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
-
-            <Link
-              href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              GitHub Repo 🌟
-            </Link>
-
-            <Link
-              href="https://nextjstemplates.com/templates/solid"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              Get Pro 🔥
-            </Link>
+            {/* <ThemeToggler /> */}
+            <CustomLink children='Contact' url="/contact"></CustomLink>
           </div>
         </div>
       </div>
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;

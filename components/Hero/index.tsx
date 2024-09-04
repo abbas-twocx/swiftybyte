@@ -1,99 +1,49 @@
-"use client";
 import Image from "next/image";
-import { useState } from "react";
+import CustomLink from "../CustomLink/CustomLink";
+import { THero } from "@/types/types";
 
-const Hero = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+const Hero: React.FC<THero> = ({ heading, description, link, image }) => {
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
-        <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-          <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className=" md:w-1/2">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Solid - A Complete SaaS Web Template
-              </h4>
-              <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
-                </span>
-              </h1>
-              <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
-              </p>
+      <section className="overflow-hidden pt-[100px]">
+        <div className="container relative mx-auto">
+          <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full max-h-[385px] w-full max-w-full bg-[#E4E9F0] blur-lg filter"></div>
+          <div className="flex items-center justify-between">
+            <div className="flex flex-1 justify-end">
+              <div
+                style={{ borderBottomLeftRadius: 80, borderTopLeftRadius: 80 }}
+                className="z-1 flex h-full max-h-[640px] min-w-[520px] max-w-[520px] translate-x-[34px] flex-col justify-center gap-[16px] bg-white py-[24px] pl-[64px] pr-[24p] md:min-h-[500px] xl:min-h-[560px]"
+              >
+                <h1 className="text-3xl font-medium leading-[120%] tracking-[-1.28px] text-black dark:text-white lg:text-[65px] ">
+                  {heading || ""}
+                </h1>
+                <p>{description || ""}</p>
 
-              <div className="mt-10">
-                <form onSubmit={handleSubmit}>
-                  <div className="flex flex-wrap gap-5">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="text"
-                      placeholder="Enter your email address"
-                      className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                    />
-                    <button
-                      aria-label="get started button"
-                      className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
-                    >
-                      Get Started
-                    </button>
-                  </div>
-                </form>
-
-                <p className="mt-5 text-black dark:text-white">
-                  Try for free no credit card required.
-                </p>
-              </div>
-            </div>
-
-            <div className="animate_right hidden md:w-1/2 lg:block">
-              <div className="relative 2xl:-mr-7.5">
-                <Image
-                  src="/images/shape/shape-01.png"
-                  alt="shape"
-                  width={46}
-                  height={246}
-                  className="absolute -left-11.5 top-0"
-                />
-                <Image
-                  src="/images/shape/shape-02.svg"
-                  alt="shape"
-                  width={36.9}
-                  height={36.7}
-                  className="absolute bottom-0 right-0 z-10"
-                />
-                <Image
-                  src="/images/shape/shape-03.svg"
-                  alt="shape"
-                  width={21.64}
-                  height={21.66}
-                  className="absolute -right-6.5 bottom-0 z-1"
-                />
-                <div className=" relative aspect-[700/444] w-full">
-                  <Image
-                    className="shadow-solid-l dark:hidden"
-                    src="/images/hero/hero-light.svg"
-                    alt="Hero"
-                    fill
-                  />
-                  <Image
-                    className="hidden shadow-solid-l dark:block"
-                    src="/images/hero/hero-dark.svg"
-                    alt="Hero"
-                    fill
+                <div className="flex w-fit items-start justify-start">
+                  <CustomLink
+                    children={link.children || ""}
+                    url={link.url || "#"}
+                    type={link.type || "secondary"}
                   />
                 </div>
               </div>
+            </div>
+
+            <div className="animate_right relative  flex min-h-[772px] w-[865px] max-w-[865px] items-center">
+              <Image
+                className="absolute"
+                width={776}
+                height={644}
+                alt=""
+                src="/images/hero/hero-shape.svg"
+              />
+              <Image
+                className="h-full max-h-[772px] w-full max-w-[865px] object-cover object-center"
+                src={image.src || ""}
+                alt={image.alt || "Banner"}
+                width={865}
+                height={772}
+              />
             </div>
           </div>
         </div>

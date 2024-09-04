@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { Brand } from "@/types/brand";
@@ -14,7 +16,6 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
             opacity: 0,
             y: -20,
           },
-
           visible: {
             opacity: 1,
             y: 0,

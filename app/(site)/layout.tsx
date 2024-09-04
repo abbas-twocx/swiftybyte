@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className={`dark:bg-black ${inter.className}`}>
         <ThemeProvider
           enableSystem={false}
