@@ -12,7 +12,8 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
-import { THero } from "@/types/types";
+import { THero, TServices } from "@/types/types";
+import Services from "@/components/Features";
 
 export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
@@ -33,12 +34,51 @@ const heroData = {
   },
 } as THero;
 
+const servicesData = {
+  title: "OUR SERVICES",
+  subTitle: "Comprehensive solutions for your needs",
+  description:
+    "Explore our range of services designed to meet your needs efficiently and effectively. From rapid collection and organization to ongoing support, we ensure you stay engaged and enjoy the process.",
+  services: [
+    {
+      id: 1,
+      title: "Digital Experience",
+      description:
+        "Our experts create digital experiences that make you stand out, enhancing your brand and driving conversions. We know how to uniquely engage customers, driving acquisition, retention and growth.",
+      icon: {
+        src: "/images/icon/icon-01.svg",
+        alt: "Digital Experience",
+      },
+    },
+    {
+      id: 1,
+      title: "Digital Experience",
+      description:
+        "Our experts create digital experiences that make you stand out, enhancing your brand and driving conversions. We know how to uniquely engage customers, driving acquisition, retention and growth.",
+      icon: {
+        src: "/images/icon/icon-02.svg",
+        alt: "Digital Experience",
+      },
+    },
+    {
+      id: 1,
+      title: "Digital Experience",
+      description:
+        "Our experts create digital experiences that make you stand out, enhancing your brand and driving conversions. We know how to uniquely engage customers, driving acquisition, retention and growth.",
+      icon: {
+        src: "/images/icon/icon-03.svg",
+        alt: "Digital Experience",
+      },
+    },
+  ],
+} as TServices;
+
 export default function Home() {
   return (
     <main>
       <Hero {...heroData} />
       <Brands />
-      <Feature />
+      <Services {...servicesData} />
       <About />
       <FeaturesTab />
       <FunFact />

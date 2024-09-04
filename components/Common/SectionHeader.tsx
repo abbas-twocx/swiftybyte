@@ -7,12 +7,10 @@ type HeaderInfo = {
   description: string;
 };
 
-const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
-  const { title, subtitle, description } = headerInfo;
+const SectionHeader: React.FC<HeaderInfo> = ({ title,subtitle, description }) => {
 
   return (
     <>
-      {/* <!-- Section Title Start --> */}
       <motion.div
         variants={{
           hidden: {
@@ -41,7 +39,6 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
         </h2>
         <p className="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">{description}</p>
       </motion.div>
-      {/* <!-- Section Title End --> */}
     </>
   );
 };
