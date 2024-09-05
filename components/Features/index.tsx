@@ -11,8 +11,8 @@ const Services: React.FC<TServices> = ({
 }) => {
   return (
     <>
-      <section id="features" className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+      <section id="features" className="">
+        <div className="container mx-auto max-w-c-1315 px-[30px] py-[60px]">
           <SectionHeader
             title={title || ""}
             description={description || ""}

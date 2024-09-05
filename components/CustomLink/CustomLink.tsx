@@ -1,6 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { ILink } from "@/types/link";
+import Image from "next/image";
 
 interface CustomLinkProps extends ILink {
   children: React.ReactNode;
@@ -14,9 +15,9 @@ const CustomLink: React.FC<CustomLinkProps> = ({
   url = "#",
 }) => {
   const linkClass = [
-    "flex overflow-hidden justify-center gap-[10px] items-center relative w-full text-base focus:outline-none leading-[120%] py-[10px] group",
+    "flex justify-center gap-[10px] items-center relative w-full text-base focus:outline-none leading-[120%] py-[10px] group",
     type === "primary" && !loading
-      ? "bg-primary font-normal text-white hover:bg-primaryho hover:shadow-xl duration-500 rounded-md px-[24px]"
+      ? "bg-primary font-normal text-white hover:bg-primaryho hover:shadow-xl duration-500 rounded-full px-[24px]"
       : "",
     type === "secondary" && !loading
       ? "bg-transparent font-normal text-primary hover:text-primaryho duration-500"
@@ -33,9 +34,16 @@ const CustomLink: React.FC<CustomLinkProps> = ({
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noopener noreferrer" : undefined}
       >
-        <span className="relative">
-          {children}
-        </span>
+        <span className="relative">{children}</span>
+        {type === "secondary" && (
+          <Image
+            width={20}
+            height={20}
+            src="/images/icon/icon-arrow-light.svg"
+            alt="Arrow"
+            className="duration-300 ease-in-out group-hover:translate-x-2"
+          />
+        )}
       </a>
     </NextLink>
   );

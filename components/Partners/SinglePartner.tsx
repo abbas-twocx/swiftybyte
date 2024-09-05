@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { TBrand } from "@/types/types";
 
-const SingleBrand = ({ brand }: { brand: TBrand }) => {
+const SinglePartner = ({ brand }: { brand: TBrand }) => {
   const { image, href, name, imageLight, id } = brand;
 
   return (
@@ -26,10 +26,10 @@ const SingleBrand = ({ brand }: { brand: TBrand }) => {
         transition={{ duration: 1, delay: id }}
         viewport={{ once: true }}
         href={href}
-        className="animate_top relative block h-[80px] max-h-[80px] w-full max-w-[80px]"
+        className="animate_top mx-w-full relative block h-10 w-[98px]"
       >
         <Image
-          className="object-contain object-center transition-all duration-300 hover:opacity-100 dark:hidden"
+          className="object-contain object-center opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
           src={image.src}
           alt={name}
           fill
@@ -45,4 +45,4 @@ const SingleBrand = ({ brand }: { brand: TBrand }) => {
   );
 };
 
-export default SingleBrand;
+export default SinglePartner;

@@ -154,7 +154,7 @@ const Header = () => {
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             {/* <ThemeToggler /> */}
-            <CustomLink children='Contact' url="/contact"></CustomLink>
+            <CustomLink children="Contact" url="/contact"></CustomLink>
           </div>
         </div>
       </div>
