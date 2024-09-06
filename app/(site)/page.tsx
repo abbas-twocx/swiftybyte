@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, technology solutions, product development, digital experience, tech modernization, innovation, digital strategy",
   robots: "index, follow",
+  metadataBase: new URL("https://www.swiftybyte.com"),
   openGraph: {
     title: "We are the digital change makers",
     description:
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "We are the digital change makers",
-      }
+      },
     ],
   },
 };
@@ -77,6 +78,7 @@ const servicesData = {
         src: "/images/icon/user-experience.svg",
         alt: "Tailored Software Solutions",
       },
+      url: "/services/digital-experience",
     },
     {
       id: 2,
@@ -87,6 +89,7 @@ const servicesData = {
         src: "/images/icon/digital-products.svg",
         alt: "Mobile App Innovation",
       },
+      url: "/services/digital-products",
     },
     {
       id: 3,
@@ -97,6 +100,7 @@ const servicesData = {
         src: "/images/icon/digital-transformation.svg",
         alt: "Dynamic Web Solutions",
       },
+      url: "/services/digital-transformation",
     },
   ],
 } as TServices;
@@ -365,7 +369,7 @@ export default function Home() {
       <Services {...servicesData} />
       {/* <Partners {...partnersData} /> */}
       <About {...aboutData} />
-      <Partners {...clientsData} />
+      {/* <Partners {...clientsData} /> */}
       <About {...aboutData2} />
       {/* <FeaturesTab /> */}
       {/* <FunFact /> */}

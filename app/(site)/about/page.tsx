@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, technology solutions, digital experience, product development, innovation, tech partnerships, digital strategy, SwiftyByte",
   robots: "index, follow",
+  metadataBase: new URL('https://www.swiftybyte.com'),
   openGraph: {
     title: "About Us - SwiftyByte",
     description:
@@ -52,32 +53,6 @@ const partnersData = {
   showHeading: false,
   brands: [
     {
-      id: 0.25,
-      name: "AWS",
-      href: "#",
-      image: {
-        src: "/images/partners/aws-logo.png",
-        alt: "Brand",
-      },
-      imageLight: {
-        src: "/images/partners/aws-logo.png",
-        alt: "Brand",
-      },
-    },
-    {
-      id: 0.3,
-      name: "Client",
-      href: "#",
-      image: {
-        src: "/images/partners/figma-logo.png",
-        alt: "Brand",
-      },
-      imageLight: {
-        src: "/images/partners/figma-logo.png",
-        alt: "Brand",
-      },
-    },
-    {
       id: 0.4,
       name: "Client",
       href: "#",
@@ -100,6 +75,32 @@ const partnersData = {
       },
       imageLight: {
         src: "/images/partners/google-logo.png",
+        alt: "Brand",
+      },
+    },
+    {
+      id: 0.25,
+      name: "AWS",
+      href: "#",
+      image: {
+        src: "/images/partners/aws-logo.png",
+        alt: "Brand",
+      },
+      imageLight: {
+        src: "/images/partners/aws-logo.png",
+        alt: "Brand",
+      },
+    },
+    {
+      id: 0.3,
+      name: "Client",
+      href: "#",
+      image: {
+        src: "/images/partners/figma-logo.png",
+        alt: "Brand",
+      },
+      imageLight: {
+        src: "/images/partners/figma-logo.png",
         alt: "Brand",
       },
     },
@@ -171,6 +172,7 @@ const servicesData = {
         src: "/images/icon/user-experience.svg",
         alt: "Tailored Software Solutions",
       },
+      url: "/services/digital-experience",
     },
     {
       id: 2,
@@ -181,6 +183,7 @@ const servicesData = {
         src: "/images/icon/digital-products.svg",
         alt: "Mobile App Innovation",
       },
+      url: "/services/digital-products",
     },
     {
       id: 3,
@@ -191,6 +194,7 @@ const servicesData = {
         src: "/images/icon/digital-transformation.svg",
         alt: "Dynamic Web Solutions",
       },
+      url: "/services/digital-transformation",
     },
   ],
 } as TServices;

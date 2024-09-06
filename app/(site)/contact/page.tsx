@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   keywords:
     "contact, digital transformation, technology solutions, SwiftyByte, customer support, business inquiries",
   robots: "index, follow",
+  metadataBase: new URL('https://www.swiftybyte.com'),
   openGraph: {
     title: "Contact Us - SwiftyByte",
     description:

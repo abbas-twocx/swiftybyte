@@ -18,6 +18,37 @@ const menuData: Menu[] = [
     title: "Services",
     newTab: false,
     path: "/services",
+    submenu: [
+      {
+        id: 30,
+        newTab: false,
+        tagline: "Our Vision",
+        title: "Defining your digital future",
+        path: "/services",
+      },
+      {
+        id: 31,
+        newTab: false,
+        tagline: "Our Services",
+        title: "Digital Experience",
+        description: "Driving customer demand",
+        path: "/services/digital-experience",
+      },
+      {
+        id: 32,
+        newTab: false,
+        title: "Digital Products",
+        description: "Building the future",
+        path: "/services/digital-products",
+      },
+      {
+        id: 33,
+        newTab: false,
+        title: "Digital Transformation",
+        description: "Rapid impact, real value",
+        path: "/services/digital-transformation",
+      },
+    ],
   },
   {
     id: 2.1,

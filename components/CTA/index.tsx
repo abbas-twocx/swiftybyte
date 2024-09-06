@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -60,8 +61,8 @@ const CTA = () => {
                   alt="Saly"
                   className="hidden xl:block"
                 /> */}
-                <a
-                  href="/auth/signup"
+                <Link
+                  href="/contact"
                   className="group inline-flex justify-center duration-300 hover:shadow-xl items-center gap-2.5 rounded-full bg-white min-w-[220px] px-6 py-3 font-medium text-black hover:opacity-90 dark:bg-white dark:text-black"
                 >
                   Contact
@@ -79,7 +80,7 @@ const CTA = () => {
                     alt="Arrow"
                     className="hidden invert duration-300 ease-in-out group-hover:translate-x-2 dark:block"
                   />
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

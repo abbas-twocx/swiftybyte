@@ -169,10 +169,10 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="tel:+923190960036"
+                        href="tel:+12064450536"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        +923190960036
+                        +1 (206) 445-0536
                       </a>
                     </li>
                   </ul>
@@ -234,8 +234,9 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
+              {/* {new Date().getFullYear()} */}
               <p>
-                &copy; {new Date().getFullYear()} SwiftyByte. All rights
+                &copy; 2020 SwiftyByte. All rights
                 reserved
               </p>
             </motion.div>

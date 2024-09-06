@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, tech modernization, digital maturity, DevOps, cloud migration, infrastructure modernization, SwiftyByte, digital services",
   robots: "index, follow",
+  metadataBase: new URL('https://www.swiftybyte.com'),
   openGraph: {
     title: "Digital Transformation - SwiftyByte",
     description:

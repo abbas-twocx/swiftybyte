@@ -129,8 +129,57 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                          <li
+                            key={key}
+                            className={`flex ${
+                              key === 0
+                                ? "mr-[24px] max-w-[240px] flex-col justify-between border-r pr-[24px]"
+                                : "flex-grow"
+                            } `}
+                          >
+                            {key === 0 ? (
+                              <div className="flex flex-col gap-[12px] lg:h-[280px]">
+                                {item.tagline && (
+                                  <span className="text-[12px] uppercase leading-[120%]">
+                                    {item.tagline}
+                                  </span>
+                                )}
+                                <Link
+                                  className="text-[32px] font-medium leading-[120%] hover:text-primary duration-300 ease-in-out"
+                                  href={item.path || "#"}
+                                >
+                                  {item.title}
+                                </Link>
+                                <div className="mt-auto flex w-fit">
+                                  <CustomLink
+                                    type="secondary"
+                                    children="Find out more"
+                                    url={item.path || "#"}
+                                  />
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="flex flex-col">
+                                <span
+                                  className={`${
+                                    item.tagline ? "" : "opacity-0"
+                                  } text-[12px] uppercase leading-[120%]`}
+                                >
+                                  {item?.tagline || "No Tagline"}
+                                </span>
+                                <Link
+                                  className="mt-[12px] hover:text-primary p-[24px] border text-center hover:border-primary rounded-md duration-300 ease-in-out"
+                                  href={item.path || "#"}
+                                >
+                                  <span className="text-[20px] font-medium leading-[120%]">
+                                    {item.title}
+                                  </span>
+                                  <p className="mt-[8px] text-[14px] leading-[120%]">
+                                    {item.description}
+                                  </p>
+                                </Link>
+                              </div>
+                            )}
                           </li>
                         ))}
                       </ul>
