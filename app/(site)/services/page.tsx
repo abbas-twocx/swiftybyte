@@ -19,12 +19,14 @@ export const metadata: Metadata = {
       "Explore SwiftyByte's comprehensive services that define digital experiences, enhance digital products, and drive digital transformation. Discover how we can help you achieve your digital goals.",
     url: "https://www.swiftybyte.com/services",
     type: "website",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
-      width: 1200,
-      height: 630,
-      alt: "Our Services - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Our Services - SwiftyByte",
+      },
+    ],
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -34,12 +36,14 @@ export const metadata: Metadata = {
     title: "Our Services - SwiftyByte",
     description:
       "Explore SwiftyByte's comprehensive services that define digital experiences, enhance digital products, and drive digital transformation. Discover how we can help you achieve your digital goals.",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
-      width: 1200,
-      height: 630,
-      alt: "Our Services - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Our Services - SwiftyByte",
+      },
+    ],
   },
 };
 

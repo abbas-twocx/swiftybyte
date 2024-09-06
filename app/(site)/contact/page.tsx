@@ -18,12 +18,14 @@ export const metadata: Metadata = {
       "Get in touch with SwiftyByte to discuss how we can help transform your digital capabilities. Reach out to us for inquiries, support, or collaboration.",
     url: "https://www.swiftybyte.com/contact",
     type: "website",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Contact Us - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us - SwiftyByte",
+      },
+    ],
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -33,12 +35,14 @@ export const metadata: Metadata = {
     title: "Contact Us - SwiftyByte",
     description:
       "Get in touch with SwiftyByte to discuss how we can help transform your digital capabilities. Reach out to us for inquiries, support, or collaboration.",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Contact Us - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us - SwiftyByte",
+      },
+    ],
   },
 };
 

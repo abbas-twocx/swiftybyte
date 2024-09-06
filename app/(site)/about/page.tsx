@@ -20,12 +20,14 @@ export const metadata: Metadata = {
       "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
     url: "https://www.swiftybyte.com/about",
     type: "website",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Contact Us - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us - SwiftyByte",
+      },
+    ],
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -35,12 +37,14 @@ export const metadata: Metadata = {
     title: "About Us - SwiftyByte",
     description:
       "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Contact Us - SwiftyByte",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us - SwiftyByte",
+      },
+    ],
   },
 };
 

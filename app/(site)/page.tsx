@@ -36,12 +36,14 @@ export const metadata: Metadata = {
     title: "We are the digital change makers",
     description:
       "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
-    images: {
-      url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
-      width: 1200,
-      height: 630,
-      alt: "We are the digital change makers",
-    },
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "We are the digital change makers",
+      }
+    ],
   },
 };
 
