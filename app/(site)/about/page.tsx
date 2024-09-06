@@ -8,8 +8,30 @@ import { TBrands, THeading, TServices, TTextWithImage } from "@/types/types";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
-  description: "This is Blog page for Solid Pro",
+  title: "About Us - SwiftyByte",
+  description:
+    "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
+  keywords:
+    "digital transformation, technology solutions, digital experience, product development, innovation, tech partnerships, digital strategy, SwiftyByte",
+  robots: "index, follow",
+  openGraph: {
+    title: "About Us - SwiftyByte",
+    description:
+      "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
+    url: "https://www.swiftybyte.com/about",
+    type: "website",
+    images: "/images/about/about-banner.jpg",
+    siteName: "SwiftyByte",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@SwiftyByte",
+    title: "About Us - SwiftyByte",
+    description:
+      "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
+    images: "/images/about/about-banner.jpg",
+  },
 };
 
 const partnersData = {
@@ -166,7 +188,7 @@ export default function About() {
       <TextWithImage {...textWithImageData} />
       <Partners {...partnersData} />
       <Services {...servicesData} />
-       <FunFact />
+      <FunFact />
       <CTA />
     </main>
   );

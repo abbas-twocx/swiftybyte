@@ -26,6 +26,10 @@ export type TButton = {
   type: "primary" | "secondary";
 };
 
+export type TPoint = {
+  point: string;
+};
+
 export type THero = {
   heading: string;
   description: string;
@@ -53,6 +57,7 @@ export type TAbout = {
   heading: string;
   description: string;
   image: Image;
+  imageRight?: boolean;
 };
 
 export type THeading = {
@@ -62,6 +67,16 @@ export type THeading = {
 
 export type TTextWithImage = {
   heading: string;
+  description?: string;
   link: TButton;
   image: Image;
+};
+
+export type TServiceSingle = {
+  heading: string;
+  description?: string;
+  link: TButton;
+  points?: TPoint[];
+  headingLeft?: boolean;
+  bgColor?: string,
 };

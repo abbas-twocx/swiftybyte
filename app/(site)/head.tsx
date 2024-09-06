@@ -1,9 +1,12 @@
 export default function Head() {
   return (
     <>
-      <title> Solid | Next.js Template for Startup and SaaS</title>
+      <title>We are the digital change makers</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="Built with Next.js and TypeScript" />
+      <meta
+        name="description"
+        content="We create experiences, platforms and partnerships that empower businesses to realise digital value, faster."
+      />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     </>
   );

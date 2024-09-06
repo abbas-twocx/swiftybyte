@@ -7,14 +7,32 @@ import {
   THero,
   TServices,
   TAbout,
-  TTextWithImage,
 } from "@/types/types";
 import Services from "@/components/Features";
 import Partners from "@/components/Partners";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "We are the digital change makers",
+  description:
+    "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
+  keywords: "digital transformation, technology solutions, product development, digital experience, tech modernization, innovation, digital strategy",
+  robots: "index, follow",
+  openGraph: {
+    title: "We are the digital change makers",
+    description: "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
+    url: "https://www.swiftybyte.com",
+    type: "website",
+    images: "/images/hero/hero-banner.png",
+    siteName: "SwiftyByte",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@SwiftyByte",
+    title: "We are the digital change makers",
+    description: "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
+    images: "/images/hero/hero-banner.png",
+  },
 };
 
 const heroData = {
@@ -244,13 +262,24 @@ const partnersData = {
 } as TBrands;
 
 const aboutData = {
-  tag: "CEO @ SwiftyByte",
-  heading: "About Ghassan Chahine",
+  tag: "Our Story",
+  heading: "Innovating Digital Futures Through Strategic Partnerships",
   description:
-    "Since 2017, Ghassan Chahine has led SwiftyByte through a transformative digital partnership with Vodafone via the Digital X Programme. Under his visionary leadership, the collaboration has garnered six major industry awards, launched the first-ever end-to-end chatbot-driven sales journey for a telecom company, and achieved the most successful iPhone launch to date.",
+    "Since 2017, SwiftyByte has been on a transformative journey, marked by our pivotal partnership with Vodafone through the Digital X Programme. Under our leadership, this collaboration has led to six major industry awards and groundbreaking innovations, including the launch of the first-ever end-to-end chatbot-driven sales journey for a telecom company. Additionally, our efforts culminated in the most successful iPhone launch to date. Our story is one of innovation, dedication, and a relentless pursuit of excellence, driving us to redefine the digital landscape and deliver exceptional value.",
   image: {
-    src: "/images/about/ghassan-image.png",
-    alt: "Ghassan CEO @ SwiftyByte",
+    src: "/images/about/our-story.jpg",
+    alt: "Our Story Banner",
+  },
+} as TAbout;
+
+const aboutData2 = {
+  tag: "SUSTAINABILITY",
+  heading: "Our Pledge",
+  description:
+    "In 2020 SwiftyByte became a carbon negative company, offsetting far more emissions than we generate. And we are now leading the way in switching over to carbon removals. We've pledged to halve our employee carbon footprint by 2024. As part of the MSQ agency group, we now have formally approved Science Based Targets to reduce it even further by 2030, as we move towards Net Zero.",
+  image: {
+    src: "/images/about/illustration-11.png",
+    alt: "Our Pledge Banner",
   },
 } as TAbout;
 
@@ -325,6 +354,7 @@ export default function Home() {
       {/* <Partners {...partnersData} /> */}
       <About {...aboutData} />
       <Partners {...clientsData} />
+      <About {...aboutData2} />
       {/* <FeaturesTab /> */}
       {/* <FunFact /> */}
       {/* <Integration /> */}

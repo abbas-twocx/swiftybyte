@@ -18,7 +18,7 @@ const featuresData: Feature[] = [
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    title: "ABC",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
   },
