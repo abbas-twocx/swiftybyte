@@ -2,12 +2,7 @@ import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import CTA from "@/components/CTA";
-import {
-  TBrands,
-  THero,
-  TServices,
-  TAbout,
-} from "@/types/types";
+import { TBrands, THero, TServices, TAbout } from "@/types/types";
 import Services from "@/components/Features";
 import Partners from "@/components/Partners";
 
@@ -15,14 +10,23 @@ export const metadata: Metadata = {
   title: "We are the digital change makers",
   description:
     "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
-  keywords: "digital transformation, technology solutions, product development, digital experience, tech modernization, innovation, digital strategy",
+  keywords:
+    "digital transformation, technology solutions, product development, digital experience, tech modernization, innovation, digital strategy",
   robots: "index, follow",
   openGraph: {
     title: "We are the digital change makers",
-    description: "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
+    description:
+      "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
     url: "https://www.swiftybyte.com",
     type: "website",
-    images: "/images/hero/hero-banner.png",
+    images: [
+      {
+        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "We are the digital change makers",
+      },
+    ],
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -30,8 +34,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@SwiftyByte",
     title: "We are the digital change makers",
-    description: "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
-    images: "/images/hero/hero-banner.png",
+    description:
+      "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
+    images: {
+      url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+      width: 1200,
+      height: 630,
+      alt: "We are the digital change makers",
+    },
   },
 };
 

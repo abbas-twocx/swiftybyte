@@ -19,7 +19,12 @@ export const metadata: Metadata = {
       "Discover how SwiftyByte enhances digital products. Learn about product development, optimization, and transformation strategies to create scalable, high-performing products.",
     url: "https://www.swiftybyte.com/services/digital-products",
     type: "website",
-    images: "/images/about/product-team.jpg",
+    images: {
+      url: "https://swiftybyte.vercel.app/images/about/product-team.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Digital Products - SwiftyByte",
+    },
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -29,7 +34,12 @@ export const metadata: Metadata = {
     title: "Digital Products - SwiftyByte",
     description:
       "Discover how SwiftyByte enhances digital products. Learn about product development, optimization, and transformation strategies to create scalable, high-performing products.",
-    images: "/images/about/product-team.jpg",
+    images: {
+      url: "https://swiftybyte.vercel.app/images/about/product-team.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Digital Products - SwiftyByte",
+    },
   },
 };
 

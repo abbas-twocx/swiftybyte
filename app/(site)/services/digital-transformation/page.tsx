@@ -19,7 +19,12 @@ export const metadata: Metadata = {
       "Explore how SwiftyByte drives digital transformation for organizations. Learn about enhancing digital delivery, tech modernization, specialist expertise, and infrastructure modernization.",
     url: "https://www.swiftybyte.com/services/digital-transformation",
     type: "website",
-    images: "/images/about/team.jpg",
+    images: {
+      url: "https://swiftybyte.vercel.app/images/about/team.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Digital Transformation - SwiftyByte",
+    },
     siteName: "SwiftyByte",
     locale: "en_US",
   },
@@ -29,7 +34,12 @@ export const metadata: Metadata = {
     title: "Digital Transformation - SwiftyByte",
     description:
       "Explore how SwiftyByte drives digital transformation for organizations. Learn about enhancing digital delivery, tech modernization, specialist expertise, and infrastructure modernization.",
-    images: "/images/about/team.jpg",
+    images: {
+      url: "https://swiftybyte.vercel.app/images/about/team.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Digital Transformation - SwiftyByte",
+    },
   },
 };
 
