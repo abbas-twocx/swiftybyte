@@ -5,6 +5,7 @@ import CTA from "@/components/CTA";
 import { TBrands, THero, TServices, TAbout } from "@/types/types";
 import Services from "@/components/Features";
 import Partners from "@/components/Partners";
+import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
   title: "We are the digital change makers",
@@ -374,11 +375,11 @@ export default function Home() {
       {/* <FeaturesTab /> */}
       {/* <FunFact /> */}
       {/* <Integration /> */}
+      <Contact />
       <CTA />
       {/* <FAQ /> */}
       {/* <Testimonial /> */}
       {/* <Pricing /> */}
-      {/* <Contact /> */}
       {/* <Blog /> */}
     </main>
   );
