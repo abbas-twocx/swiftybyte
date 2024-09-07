@@ -1,0 +1,8 @@
+# robots.txt for `https://swiftybyte.vercel.app`
+
+# Allow all crawlers access to everything
+User-agent: *
+Disallow:
+
+# Sitemap file location
+Sitemap: https://swiftybyte.vercel.app/sitemap.xml
