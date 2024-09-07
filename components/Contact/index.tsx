@@ -10,7 +10,6 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
     reset,
-    setError,
   } = useForm({
     defaultValues: {
       name: "",
@@ -55,8 +54,8 @@ const Contact = () => {
 
   return (
     <>
-      <section id="support" className="px-4 md:px-8 2xl:px-0">
-        <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
+      <section id="support" className="md:px-8 2xl:px-0">
+        <div className="relative mx-auto max-w-c-1390 px-[24px] pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
             <Image
@@ -80,7 +79,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -100,19 +98,17 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Full name"
-                    required
                     {...register("name", { required: "Full name is required" })}
                     className={`w-full border-b ${
                       errors.name ? "bg-red-500/10" : ""
                     } border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2`}
                   />
-                  {/* {errors.name && (
+                  {errors.name && (
                     <p className="text-red-500">{errors.name.message}</p>
-                  )} */}
+                  )}
                   <input
                     type="email"
                     placeholder="Email address"
-                    required
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
@@ -124,9 +120,9 @@ const Contact = () => {
                       errors.email ? "bg-red-500/10" : ""
                     } border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2`}
                   />
-                  {/* {errors.email && (
+                  {errors.email && (
                     <p className="text-red-500">{errors.email.message}</p>
-                  )} */}
+                  )}
                 </div>
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
@@ -138,10 +134,9 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Phone number"
-                    required
                     {...register("phone", {
                       pattern: {
-                        value: /^\+?[1-9]\d{1,14}$/,
+                        value: /^\+?[0-9]\d{1,14}$/,
                         message: "Invalid phone number",
                       },
                     })}
@@ -149,15 +144,14 @@ const Contact = () => {
                       errors.phone ? "bg-red-500/10" : ""
                     } border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2`}
                   />
-                  {/* {errors.phone && (
+                  {errors.phone && (
                     <p className="text-red-500">{errors.phone.message}</p>
-                  )} */}
+                  )}
                 </div>
                 <div className="mb-11.5 flex flex-col">
                   <textarea
                     placeholder="Message"
                     rows={4}
-                    required
                     {...register("message", {
                       required: "Message is required",
                     })}
@@ -194,7 +188,6 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   y: 0,

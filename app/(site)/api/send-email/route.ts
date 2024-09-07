@@ -1,4 +1,3 @@
-
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -9,14 +8,14 @@ export async function POST(req: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "abbas143186@gmail.com",
-        pass: "mlbu nhcc cdhh sxbm",
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
     const mailOptions = {
       from: email,
-      to: "abbas143186@gmail.com",
+      to: process.env.TO_EMAIL,
       subject: `Contact Form Submission: ${subject}`,
       text: `
         Name: ${name}\n

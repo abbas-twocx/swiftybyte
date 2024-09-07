@@ -13,16 +13,16 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, tech modernization, digital maturity, DevOps, cloud migration, infrastructure modernization, SwiftyByte, digital services",
   robots: "index, follow",
-  metadataBase: new URL('https://www.swiftybyte.com'),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "Digital Transformation - SwiftyByte",
     description:
       "Explore how SwiftyByte drives digital transformation for organizations. Learn about enhancing digital delivery, tech modernization, specialist expertise, and infrastructure modernization.",
-    url: "https://www.swiftybyte.com/services/digital-transformation",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/services/digital-transformation`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/team.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/team.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Transformation - SwiftyByte",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Explore how SwiftyByte drives digital transformation for organizations. Learn about enhancing digital delivery, tech modernization, specialist expertise, and infrastructure modernization.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/team.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/team.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Transformation - SwiftyByte",

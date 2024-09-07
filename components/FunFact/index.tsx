@@ -6,8 +6,12 @@ import { motion } from "framer-motion";
 const FunFact = () => {
   return (
     <>
-      <section className="px-[30px] py-[60px]">
-        <div className="relative z-1 mx-auto container rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
+      <section className="px-[24px] py-[30px] lg:px-[30px] lg:py-[60px]">
+        <div
+          className="container relative z-1 mx-auto rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-[30px] 
+        dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark 
+        lg:py-22.5 xl:py-27.5"
+        >
           <Image
             fill
             src="/images/shape/shape-dotted-light-02.svg"

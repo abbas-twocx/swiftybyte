@@ -17,7 +17,7 @@ const ServiceSingle: React.FC<TServiceSingle> = ({
   return (
     <>
       <section className="w-full bg-white">
-        <div className="flex w-full flex-row items-center justify-between gap-[32px] text-center">
+        <div className="flex w-full flex-col items-center justify-between gap-[32px] text-center lg:flex-row">
           <motion.div
             variants={{
               hidden: {
@@ -39,7 +39,7 @@ const ServiceSingle: React.FC<TServiceSingle> = ({
             <div
               className={`${
                 headingLeft ? "mr-auto" : "ml-auto"
-              } flex max-w-[620px] flex-col justify-center px-[30px] text-start`}
+              } flex max-w-[620px] flex-col items-center justify-center px-[24px] lg:px-[30px] lg:text-start`}
             >
               {description && (
                 <p className="mt-[24px] text-[14px] text-waterloo">
@@ -63,7 +63,7 @@ const ServiceSingle: React.FC<TServiceSingle> = ({
                     </div>
                   ))}
               </div>
-              <div className="mt-[32px] flex w-fit items-start justify-start">
+              <div className="mt-[32px] flex w-fit items-center justify-center lg:items-start lg:justify-start">
                 <Link
                   href={link.url}
                   className={`group inline-flex min-w-[220px] items-center justify-center gap-2.5 rounded-full ${
@@ -105,9 +105,12 @@ const ServiceSingle: React.FC<TServiceSingle> = ({
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className={`relative flex max-h-[480px] min-h-[480px] flex-1 items-center justify-center ${
-              headingLeft ? "-order-1 rounded-r-full" : "rounded-l-full"
-            } ${bgColor ? bgColor : "bg-primary"}`}
+            className={`relative flex max-h-[320px] min-h-[320px] w-full flex-1 items-center 
+              justify-center lg:max-h-[480px] lg:min-h-[480px] ${
+                headingLeft
+                  ? "-order-1 lg:rounded-r-full"
+                  : " lg:rounded-l-full"
+              } ${bgColor ? bgColor : "bg-primary"}`}
           >
             <h3 className="text-hero leading-[120%] text-white">{heading}</h3>
           </motion.div>

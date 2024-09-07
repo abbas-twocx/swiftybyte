@@ -14,16 +14,16 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, technology solutions, digital experience, product development, innovation, tech partnerships, digital strategy, SwiftyByte",
   robots: "index, follow",
-  metadataBase: new URL('https://www.swiftybyte.com'),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "About Us - SwiftyByte",
     description:
       "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
-    url: "https://www.swiftybyte.com/about",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/about`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/about-banner.jpg`,
         width: 1200,
         height: 630,
         alt: "Contact Us - SwiftyByte",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "Discover how SwiftyByte partners with organizations to enhance and transform their digital capabilities. Explore our services and the impact we make.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/about-banner.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/about-banner.jpg`,
         width: 1200,
         height: 630,
         alt: "Contact Us - SwiftyByte",

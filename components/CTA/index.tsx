@@ -8,8 +8,8 @@ const CTA = () => {
   return (
     <>
       <section className="overflow-hidden px-4 py-[60px] md:px-8 2xl:px-0">
-        <div className="container flex items-center w-full min-h-[300px] mx-auto rounded-lg bg-gradient-to-t from-primary to-[#5199e1] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
-          <div className="flex w-full flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
+        <div className="container mx-auto flex min-h-[300px] w-full items-center rounded-lg bg-gradient-to-t from-primary to-[#5199e1] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
+          <div className="flex w-full flex-wrap items-center justify-center gap-8 md:flex-nowrap md:gap-0 lg:justify-between">
             <motion.div
               variants={{
                 hidden: {
@@ -28,11 +28,15 @@ const CTA = () => {
               viewport={{ once: true }}
               className="animate_left md:w-[70%] lg:w-1/2"
             >
-              <h2 className="mb-4 w-11/12 text-3xl font-bold text-white dark:text-black xl:text-sectiontitle4">
+              <h2
+                className="mb-4 w-11/12 text-center text-3xl font-bold text-white dark:text-black lg:text-start
+              xl:text-sectiontitle4"
+              >
                 Let’s Transform Together
               </h2>
-              <p className="text-white dark:text-black">
-                Join us on a journey of innovation and excellence. Reach out to see <br></br> how we can achieve great things together.
+              <p className="text-center text-white dark:text-black lg:text-start">
+                Join us on a journey of innovation and excellence. Reach out to
+                see <br></br> how we can achieve great things together.
               </p>
             </motion.div>
             <motion.div
@@ -63,7 +67,7 @@ const CTA = () => {
                 /> */}
                 <Link
                   href="/contact"
-                  className="group inline-flex justify-center duration-300 hover:shadow-xl items-center gap-2.5 rounded-full bg-white min-w-[220px] px-6 py-3 font-medium text-black hover:opacity-90 dark:bg-white dark:text-black"
+                  className="group inline-flex min-w-[220px] items-center justify-center gap-2.5 rounded-full bg-white px-6 py-3 font-medium text-black duration-300 hover:opacity-90 hover:shadow-xl dark:bg-white dark:text-black"
                 >
                   Contact
                   <Image

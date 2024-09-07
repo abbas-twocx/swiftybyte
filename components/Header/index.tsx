@@ -44,14 +44,14 @@ const Header = () => {
               alt="logo"
               width={119.03}
               height={30}
-              className="hidden max-h-[60px] w-full max-w-[220px] object-contain object-center dark:block"
+              className="hidden max-h-[30px] w-full max-w-[220px] object-contain object-center dark:block lg:max-h-[30px]"
             />
             <Image
               src="/images/logo/logo-light.svg"
               alt="logo"
               width={119.03}
               height={30}
-              className="max-h-[60px] w-full max-w-[220px] object-contain object-center dark:hidden"
+              className="max-h-[30px] w-full max-w-[220px] object-contain object-center dark:hidden lg:max-h-[30px]"
             />
           </a>
 
@@ -100,7 +100,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-fit rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection lg:max-h-[400px] xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav>
@@ -133,24 +133,24 @@ const Header = () => {
                             key={key}
                             className={`flex ${
                               key === 0
-                                ? "mr-[24px] max-w-[240px] flex-col justify-between border-r pr-[24px]"
+                                ? "lg;border-r mr-[24px] max-w-full flex-col justify-between lg:max-w-[240px] lg:pr-[24px]"
                                 : "flex-grow"
                             } `}
                           >
                             {key === 0 ? (
                               <div className="flex flex-col gap-[12px] lg:h-[280px]">
                                 {item.tagline && (
-                                  <span className="text-[12px] uppercase leading-[120%]">
+                                  <span className="hidden text-[12px] uppercase leading-[120%] lg:block">
                                     {item.tagline}
                                   </span>
                                 )}
                                 <Link
-                                  className="text-[32px] font-medium leading-[120%] hover:text-primary duration-300 ease-in-out"
+                                  className="text-[18px] font-medium leading-[120%] duration-300 ease-in-out hover:text-primary lg:text-[32px]"
                                   href={item.path || "#"}
                                 >
                                   {item.title}
                                 </Link>
-                                <div className="mt-auto flex w-fit">
+                                <div className="mt-auto hidden w-fit lg:flex">
                                   <CustomLink
                                     type="secondary"
                                     children="Find out more"
@@ -163,15 +163,15 @@ const Header = () => {
                                 <span
                                   className={`${
                                     item.tagline ? "" : "opacity-0"
-                                  } text-[12px] uppercase leading-[120%]`}
+                                  } hidden text-[12px] uppercase leading-[120%] lg:flex`}
                                 >
                                   {item?.tagline || "No Tagline"}
                                 </span>
                                 <Link
-                                  className="mt-[12px] hover:text-primary p-[24px] border text-center hover:border-primary rounded-md duration-300 ease-in-out"
+                                  className="mt-[12px] rounded-md text-start duration-300 ease-in-out hover:border-primary hover:text-primary lg:border lg:p-[24px] lg:text-center"
                                   href={item.path || "#"}
                                 >
-                                  <span className="text-[20px] font-medium leading-[120%]">
+                                  <span className="text-[18px] font-medium leading-[120%] lg:text-[20px]">
                                     {item.title}
                                   </span>
                                   <p className="mt-[8px] text-[14px] leading-[120%]">

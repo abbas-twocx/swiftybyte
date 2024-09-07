@@ -14,16 +14,16 @@ export const metadata: Metadata = {
   keywords:
     "digital transformation, technology solutions, product development, digital experience, tech modernization, innovation, digital strategy",
   robots: "index, follow",
-  metadataBase: new URL("https://www.swiftybyte.com"),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "We are the digital change makers",
     description:
       "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
-    url: "https://www.swiftybyte.com",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/hero/hero-banner.png`,
         width: 1200,
         height: 630,
         alt: "We are the digital change makers",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "We create experiences, platforms and partnerships that empower businesses to realise digital value, faster.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/hero/hero-banner.png`,
         width: 1200,
         height: 630,
         alt: "We are the digital change makers",

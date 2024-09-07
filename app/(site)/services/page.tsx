@@ -13,16 +13,16 @@ export const metadata: Metadata = {
   keywords:
     "digital services, digital experience, digital products, digital transformation, SwiftyByte, technology solutions, service offerings",
   robots: "index, follow",
-  metadataBase: new URL('https://www.swiftybyte.com'),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "Our Services - SwiftyByte",
     description:
       "Explore SwiftyByte's comprehensive services that define digital experiences, enhance digital products, and drive digital transformation. Discover how we can help you achieve your digital goals.",
-    url: "https://www.swiftybyte.com/services",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/services`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/hero/hero-banner.png`,
         width: 1200,
         height: 630,
         alt: "Our Services - SwiftyByte",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Explore SwiftyByte's comprehensive services that define digital experiences, enhance digital products, and drive digital transformation. Discover how we can help you achieve your digital goals.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/hero/hero-banner.png",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/hero/hero-banner.png`,
         width: 1200,
         height: 630,
         alt: "Our Services - SwiftyByte",
@@ -60,7 +60,7 @@ const headingData = {
 const servicesData = {
   heading: "Digital Experience",
   description:
-    "MMT’s experts create digital experiences that stand out, enhancing your brand and driving conversions. Our DX designers know how to uniquely engage customers, driving acquisition, retention and growth. Let us lead you to the right strategy that differentiates your brand and delivers on the promise of being a digital change maker.",
+    "SwiftyByte’s experts create digital experiences that stand out, enhancing your brand and driving conversions. Our DX designers know how to uniquely engage customers, driving acquisition, retention and growth. Let us lead you to the right strategy that differentiates your brand and delivers on the promise of being a digital change maker.",
   link: {
     label: "Find out more",
     type: "primary",
@@ -85,7 +85,7 @@ const servicesData = {
 const servicesData2 = {
   heading: "Digital Products",
   description:
-    "When your digital product is a core part of your business it needs to deliver a first-class experience for all of your users. That can mean going on a journey from an exciting concept to a scalable new digital product, refining and enhancing your current product set or instilling a lean approach into your teams that will turbo-charge delivery. MMT works hand-in-glove with organisations to set strategy and instil the right skills and processes in your team so you can bring game-changing digital products to market.",
+    "When your digital product is a core part of your business it needs to deliver a first-class experience for all of your users. That can mean going on a journey from an exciting concept to a scalable new digital product, refining and enhancing your current product set or instilling a lean approach into your teams that will turbo-charge delivery. SwiftyByte works hand-in-glove with organisations to set strategy and instil the right skills and processes in your team so you can bring game-changing digital products to market.",
   link: {
     label: "Find out more",
     type: "primary",
@@ -112,7 +112,7 @@ const servicesData2 = {
 const servicesData3 = {
   heading: "Digital Transformation",
   description:
-    "We help your organisation to transform digitally. MMT partners with you to create change and deliver value that matches your broader organisational goals. Our strategic approach, clear frameworks and skilled people help you to stay flexible, embrace innovation faster and ultimately transform your digital operations.  ",
+    "We help your organisation to transform digitally. SwiftyByte partners with you to create change and deliver value that matches your broader organisational goals. Our strategic approach, clear frameworks and skilled people help you to stay flexible, embrace innovation faster and ultimately transform your digital operations.  ",
   link: {
     label: "Find out more",
     type: "primary",

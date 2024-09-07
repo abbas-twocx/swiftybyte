@@ -12,7 +12,7 @@ const Services: React.FC<TServices> = ({
   return (
     <>
       <section id="features" className="">
-        <div className="container mx-auto max-w-c-1315 px-[30px] py-[60px]">
+        <div className="container mx-auto max-w-c-1315 lg:px-[30px] px-[24px] lg:py-[60px] py-[30px]">
           <SectionHeader
             title={title || ""}
             description={description || ""}

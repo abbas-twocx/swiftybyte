@@ -13,16 +13,16 @@ export const metadata: Metadata = {
   keywords:
     "digital products, product development, product optimization, product transformation, SwiftyByte, product strategy, user experience",
   robots: "index, follow",
-  metadataBase: new URL('https://www.swiftybyte.com'),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "Digital Products - SwiftyByte",
     description:
       "Discover how SwiftyByte enhances digital products. Learn about product development, optimization, and transformation strategies to create scalable, high-performing products.",
-    url: "https://www.swiftybyte.com/services/digital-products",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/services/digital-products`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/product-team.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/product-team.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Products - SwiftyByte",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Discover how SwiftyByte enhances digital products. Learn about product development, optimization, and transformation strategies to create scalable, high-performing products.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/product-team.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/product-team.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Products - SwiftyByte",

@@ -13,9 +13,9 @@ const About: React.FC<TAbout> = ({
 }) => {
   return (
     <>
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-        <div className="container mx-auto px-[30px] py-[60px]">
-          <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-32.5">
+      <section className="overflow-hidden pb-[0px] lg:pb-25 xl:pb-30">
+        <div className="container mx-auto px-[24px] py-[30px] lg:px-[30px] lg:py-[60px]">
+          <div className="flex  flex-col items-center gap-8 lg:flex-row lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
@@ -32,20 +32,14 @@ const About: React.FC<TAbout> = ({
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className={`animate_left relative mx-auto aspect-[588/526.5] rounded-2xl md:w-1/2 ${
+              className={`animate_left relative mx-auto aspect-[588/526.5] w-full rounded-2xl lg:w-1/2 ${
                 imageRight ? "order-1" : ""
               }`}
             >
               <Image
                 src={image.src}
                 alt={image.alt}
-                className="rounded-2xl object-cover object-center dark:hidden"
-                fill
-              />
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className="hidden rounded-2xl object-cover object-center dark:block"
+                className="rounded-2xl object-cover object-center"
                 fill
               />
             </motion.div>
@@ -72,13 +66,13 @@ const About: React.FC<TAbout> = ({
                   {tag || ""}
                 </span>{" "}
               </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
+              <h2 className="relative mb-6 text-[28px] font-bold leading-[120%] text-black dark:text-white lg:text-sectiontitle4">
                 {heading || ""}
                 {/* <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
                   SaaS Startup
                 </span> */}
               </h2>
-              <p>{description || ""}</p>
+              <p className="text-justify lg:text-start">{description || ""}</p>
 
               {/* <div className="mt-7.5 flex items-center gap-5">
                 <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">

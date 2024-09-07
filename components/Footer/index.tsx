@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
-        <div className="container mx-auto px-4 md:px-8 2xl:px-0">
+        <div className="container mx-auto px-[24px] md:px-8 2xl:px-0">
           <div className="py-20 lg:py-25">
             <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
               <motion.div
@@ -235,10 +235,7 @@ const Footer = () => {
               className="animate_top"
             >
               {/* {new Date().getFullYear()} */}
-              <p>
-                &copy; 2020 SwiftyByte. All rights
-                reserved
-              </p>
+              <p>&copy; 2020 SwiftyByte. All rights reserved</p>
             </motion.div>
 
             <motion.div

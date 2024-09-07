@@ -13,16 +13,16 @@ export const metadata: Metadata = {
   keywords:
     "digital experience, digital strategy, strategic roadmap, collaborative innovation, managed services, SwiftyByte, user experience, brand enhancement",
   robots: "index, follow",
-  metadataBase: new URL('https://www.swiftybyte.com'),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}`),
   openGraph: {
     title: "Digital Experience - SwiftyByte",
     description:
       "Explore how SwiftyByte creates digital experiences that enhance your brand and drive conversions. Discover our approach to digital strategy, innovation, and managed services.",
-    url: "https://www.swiftybyte.com/services/digital-experience",
+    url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/services/digital-experience`,
     type: "website",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/team-discussion.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/team-discussion.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Experience - SwiftyByte",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Explore how SwiftyByte creates digital experiences that enhance your brand and drive conversions. Discover our approach to digital strategy, innovation, and managed services.",
     images: [
       {
-        url: "https://swiftybyte.vercel.app/images/about/team-discussion.jpg",
+        url: `${process.env.NEXT_PUBLIC_SERVER_URL ?? 'https://www.swiftybyte.com'}/images/about/team-discussion.jpg`,
         width: 1200,
         height: 630,
         alt: "Digital Experience - SwiftyByte",
