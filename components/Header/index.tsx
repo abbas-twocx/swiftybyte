@@ -36,7 +36,7 @@ const Header = () => {
           : ""
       }`}
     >
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-[24px] lg:px-[30px] xl:flex">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
@@ -98,7 +98,8 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          style={{ overflow: "auto" }}
+          className={`invisible h-0 w-full items-center justify-between overflow-auto xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
             "navbar !visible mt-4 h-auto max-h-fit rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection lg:max-h-[400px] xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
@@ -145,6 +146,9 @@ const Header = () => {
                                   </span>
                                 )}
                                 <Link
+                                  onClick={() => {
+                                    setNavigationOpen(!navigationOpen);
+                                  }}
                                   className="text-[18px] font-medium leading-[120%] duration-300 ease-in-out hover:text-primary lg:text-[32px]"
                                   href={item.path || "#"}
                                 >
@@ -170,6 +174,9 @@ const Header = () => {
                                 <Link
                                   className="mt-[12px] rounded-md text-start duration-300 ease-in-out hover:border-primary hover:text-primary lg:border lg:p-[24px] lg:text-center"
                                   href={item.path || "#"}
+                                  onClick={() => {
+                                    setNavigationOpen(!navigationOpen);
+                                  }}
                                 >
                                   <span className="text-[18px] font-medium leading-[120%] lg:text-[20px]">
                                     {item.title}
@@ -187,6 +194,9 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
+                      onClick={() => {
+                        setNavigationOpen(!navigationOpen);
+                      }}
                       className={
                         pathUrl === menuItem.path
                           ? "text-primary hover:text-primary"
