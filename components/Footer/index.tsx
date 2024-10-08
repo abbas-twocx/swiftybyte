@@ -235,7 +235,7 @@ const Footer = () => {
               className="animate_top"
             >
               {/* {new Date().getFullYear()} */}
-              <p>&copy; 2020 SwiftyByte. All rights reserved</p>
+              <p>&copy; 2024 SwiftyByte. All rights reserved</p>
             </motion.div>
 
             <motion.div
